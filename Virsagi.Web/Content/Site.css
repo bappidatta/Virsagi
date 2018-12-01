@@ -1,12 +1,14 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: whitesmoke;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -32,12 +34,19 @@ h2 {
     padding-bottom: 8px;
     margin-bottom: 30px;
     line-height: 1.75em;
-    border-width: 0 0 5px;
+}
+
+.underline {
+    padding-bottom: 8px;
+    margin-bottom: 30px;
+    line-height: 1.75em;
+    border-width: 0 0 3px;
     border-style: solid;
 }
 
 p {
-    font-weight: 300;
+    font-weight: 300 !important;
+    font-family: Roboto, sans-serif;
     color: #838383;
     font-size: 18px;
     font-style: normal;

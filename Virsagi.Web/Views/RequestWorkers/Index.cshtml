@@ -3,5 +3,80 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h3 class="text-primary underline">Requesting Workers</h3>
+
+<blockquote>
+    <p>
+        You can use the online form to request for workers.
+        A represtative of an Employment Agency eill be touch within one(1) day to confirm your request.
+    </p>
+</blockquote>
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h4>Online Form Submission</h4></div>
+
+    <div class="panel-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-6">
+                    <label>
+                        <input type="radio" name="RequestType" value="1" checked /> I represent a Company
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label>
+                        <input type="radio" name="RequestType" value="1" /> I represent a Recruitment Agent
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Contact Person</label>
+                    <input type="text" class="form-control" name="ContactPerson" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6">
+                    <label>Contact Number</label>
+                    <input type="text" class="form-control" name="ContactNumber" />
+                </div>
+                <div class="col-md-6">
+                    <label>Company UEN Number</label>
+                    <input type="text" class="form-control" name="CompanyUENNumber" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Company Name</label>
+                    <input type="text" class="form-control" name="CompanyName" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Email</label>
+                    <input type="text" class="form-control" name="Email" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Manpower Request Details</label><br />
+                    <small>Please tell us what skills you require your candidate to possess</small>
+                    <textarea type="text" class="form-control" name="Details"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Special Request</label>
+                    <textarea type="text" class="form-control" name="Details"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
