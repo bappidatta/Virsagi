@@ -6,19 +6,10 @@ using System.Web.Mvc;
 
 namespace Virsagi.Web.Controllers
 {
-    public class HomeController : Controller
+    public class RequestWorkersController : Controller
     {
+        // GET: RequestWorkers
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult Contact()
         {
             return View();
         }
