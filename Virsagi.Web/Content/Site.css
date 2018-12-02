@@ -26,8 +26,7 @@ textarea {
 }*/
 
 .row {
-    margin-top: 50px !important;
-    margin-bottom: 100px !important;
+    margin-bottom: 50px !important;
 }
 
 h2 {
@@ -54,6 +53,23 @@ p {
 }
 
 .jumbotron {
-    background-image: url("../img/jumbotron_bg.jpg");
+    border-radius: 0px !important;
+}
+
+.home-bg {
+    background-image: url("/Content/images/home.jpg");
     background-size: cover;
+    height: 500px;
+}
+
+.about-bg {
+    background-image: url("/Content/images/about.jpg");
+    background-size: cover;
+    height: 500px;
+}
+
+.contact-bg {
+    background-image: url("/Content/images/contact.jpg");
+    background-size: cover;
+    height: 500px;
 }
