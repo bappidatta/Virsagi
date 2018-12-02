@@ -54,22 +54,20 @@ p {
 
 .jumbotron {
     border-radius: 0px !important;
+    height: 500px;
 }
 
 .home-bg {
     background-image: url("/Content/images/home.jpg");
     background-size: cover;
-    height: 500px;
 }
 
 .about-bg {
     background-image: url("/Content/images/about.jpg");
     background-size: cover;
-    height: 500px;
 }
 
 .contact-bg {
     background-image: url("/Content/images/contact.jpg");
     background-size: cover;
-    height: 500px;
 }
