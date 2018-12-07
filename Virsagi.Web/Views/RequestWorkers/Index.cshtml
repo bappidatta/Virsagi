@@ -1,4 +1,4 @@
-﻿
+﻿@model Virsagi.Web.ViewModels.WorkerRequestViewModel
 @{
     ViewBag.Title = "Requesting Workers";
 }
@@ -12,13 +12,19 @@
     </p>
 </blockquote>
 
+@if (Convert.ToInt16(TempData["isSuccess"]) == 1)
+{
+    <div class="alert alert-success" role="alert">Successfully saved!</div>
+}
+
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4>Online Form Submission</h4>
     </div>
 
     <div class="panel-body">
-        <form class="form-horizontal">
+        @using (Html.BeginForm("Create", "Requestworkers", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
             <div class="form-group">
                 <div class="col-md-6">
                     <label>
@@ -36,6 +42,7 @@
                 <div class="col-md-12">
                     <label>Contact Person</label>
                     <input type="text" class="form-control" name="ContactPerson" />
+                    @Html.ValidationMessageFor(model => model.ContactPerson)
                 </div>
             </div>
 
@@ -75,7 +82,7 @@
             <div class="form-group">
                 <div class="col-md-12">
                     <label>Special Request</label>
-                    <textarea type="text" rows="3" class="form-control" name="Details"></textarea>
+                    <textarea type="text" rows="3" class="form-control" name="SpecialRequest"></textarea>
                 </div>
             </div>
 
@@ -84,7 +91,7 @@
                     <input type="submit" class="btn btn-primary btn-block" value="Submit Request" />
                 </div>
             </div>
-        </form>
+        }
     </div>
 </div>
 
