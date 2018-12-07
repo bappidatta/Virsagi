@@ -18,13 +18,6 @@
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-/*input,
-select,
-textarea {
-    max-width: 280px;
-}*/
-
 .row {
     margin-bottom: 50px !important;
 }
@@ -80,3 +73,16 @@ p {
         padding: 10px;
         width: auto;
     }
+
+blockquote {
+    border-left: 5px solid #258CDB;
+    background-color: #F1F8FF;
+}
+
+.btn-primary {
+    background-color: #258CDB;
+}
+
+.text-primary {
+    color: #258CDB;
+}
