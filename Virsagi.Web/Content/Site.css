@@ -75,9 +75,13 @@ p {
     }
 
 blockquote {
-    border-left: 5px solid #258CDB;
+    border-left: 5px solid #F1F8FF;
     background-color: #F1F8FF;
 }
+    blockquote p {
+        color: #337AB7;
+        text-align: justify;
+    }
 
 .btn-primary {
     background-color: #258CDB;
