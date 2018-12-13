@@ -9,7 +9,9 @@ namespace Virsagi.Web.ViewModels
     public class WorkerRequestViewModel
     {
         public int WorkerRequestID { get; set; }
+
         public int RequestType { get; set; }
+        public string RequestTypeString { get; set; }
 
         [Required(AllowEmptyStrings = false)]
         public string ContactPerson { get; set; }
@@ -29,6 +31,7 @@ namespace Virsagi.Web.ViewModels
         public string Details { get; set; }
         public string SpecialRequest { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:M}")]
         public DateTime CreatedDate { get; set; }
     }
 }

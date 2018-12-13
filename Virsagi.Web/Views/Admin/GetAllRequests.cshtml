@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Virsagi.Web.ViewModels.WorkerRequestViewModel>
+
+@{
+    ViewBag.Title = "Worker Requests";
+}
+
+<h3 class="text-primary underline">@ViewBag.Title</h3>
+
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>
+            RequestType
+        </th>
+        <th>
+            Contact Person
+        </th>
+        <th>
+            Contact Number
+        </th>
+        <th>
+            Company UEN Number
+        </th>
+        <th>
+            Company Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Request Details
+        </th>
+        <th>
+            Special Request
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestTypeString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactPerson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyUENNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Details)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialRequest)
+            </td>
+        </tr>
+    }
+
+</table>

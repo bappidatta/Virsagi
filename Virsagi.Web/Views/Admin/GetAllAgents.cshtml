@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Virsagi.Web.ViewModels.AgentViewModel>
+@{
+    ViewBag.Title = "Agents";
+}
+
+<h3 class="text-primary underline">@ViewBag.Title</h3>
+
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>
+            RL Name
+        </th>
+        <th>
+            RL No
+        </th>
+        <th>
+            RL Address
+        </th>
+        <th>
+            Contact Number
+        </th>
+        <th>
+            Email
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RLName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RLNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RLAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+    </tr>
+}
+
+</table>

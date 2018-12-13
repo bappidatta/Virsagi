@@ -23,12 +23,25 @@
                 </a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Registering Workers", "Index", "RegisterWorkers")</li>
-                    <li>@Html.ActionLink("Requesting Workers", "Index", "RequestWorkers")</li>
-                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                </ul>
+                @if (!Request.IsAuthenticated)
+                {
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Registering Workers", "Index", "RegisterWorkers")</li>
+                        <li>@Html.ActionLink("Requesting Workers", "Index", "RequestWorkers")</li>
+                        <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                    </ul>
+                }
+
+                @if (Request.IsAuthenticated)
+                {
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Agents", "GetAllAgents", "Admin")</li>
+                        <li>@Html.ActionLink("Requests", "GetAllRequests", "Admin")</li>
+                    </ul>
+
+                    @Html.Partial("_LogInPartial")
+                }
 
                 <ul class="nav navbar-nav navbar-right">
                     <li>@Html.ActionLink("En", "Index", "Home")</li>
