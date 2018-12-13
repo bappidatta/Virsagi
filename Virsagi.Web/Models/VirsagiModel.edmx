@@ -5,6 +5,17 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="VirsagiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="AgentID" />
+          </Key>
+          <Property Name="AgentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RLName" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="RLNo" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="RLAddress" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="ContactNumber" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
         <EntityType Name="WorkerRequest">
           <Key>
             <PropertyRef Name="WorkerRequestID" />
@@ -21,6 +32,7 @@
           <Property Name="CreatedDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityContainer Name="VirsagiModelStoreContainer">
+          <EntitySet Name="Agent" EntityType="Self.Agent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WorkerRequest" EntityType="Self.WorkerRequest" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -29,6 +41,7 @@
       <Schema Namespace="VirsagiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="VirsagiContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="WorkerRequests" EntityType="VirsagiModel.WorkerRequest" />
+          <EntitySet Name="Agents" EntityType="VirsagiModel.Agent" />
         </EntityContainer>
         <EntityType Name="WorkerRequest">
           <Key>
@@ -44,6 +57,17 @@
           <Property Name="Details" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="SpecialRequest" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="AgentID" />
+          </Key>
+          <Property Name="AgentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RLName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="RLNo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="RLAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ContactNumber" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -64,6 +88,18 @@
                 <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
                 <ScalarProperty Name="RequestType" ColumnName="RequestType" />
                 <ScalarProperty Name="WorkerRequestID" ColumnName="WorkerRequestID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Agents">
+            <EntityTypeMapping TypeName="VirsagiModel.Agent">
+              <MappingFragment StoreEntitySet="Agent">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="RLAddress" ColumnName="RLAddress" />
+                <ScalarProperty Name="RLNo" ColumnName="RLNo" />
+                <ScalarProperty Name="RLName" ColumnName="RLName" />
+                <ScalarProperty Name="AgentID" ColumnName="AgentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

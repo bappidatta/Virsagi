@@ -1,4 +1,4 @@
-﻿
+﻿@model Virsagi.Web.ViewModels.AgentViewModel
 @{
     ViewBag.Title = "Registering Workers";
 }
@@ -14,24 +14,32 @@
     </p>
 </blockquote>
 
+@if (Convert.ToInt16(TempData["isSuccess"]) == 1)
+{
+    <div class="alert alert-success" role="alert">Successfully saved!</div>
+}
+
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4>Registration Form</h4>
     </div>
 
     <div class="panel-body">
-        <form class="form-horizontal">
+        @using (Html.BeginForm("Create", "RegisterWorkers", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
             <h4><strong>Agency</strong></h4>
 
             <div class="form-group">
                 <label class="col-md-2">Name of R.L.</label>
                 <div class="col-md-4">
                     <input type="text" class="form-control" name="RLName" />
+                    @Html.ValidationMessageFor(model => model.RLName)
                 </div>
 
                 <label class="col-md-2">R.L. No</label>
                 <div class="col-md-4">
                     <input type="text" class="form-control" name="RLNo" />
+                    @Html.ValidationMessageFor(model => model.RLNo)
                 </div>
             </div>
 
@@ -39,6 +47,7 @@
                 <label class="col-md-2">Address of R.L.</label>
                 <div class="col-md-10">
                     <textarea class="form-control" name="RLAddress"></textarea>
+                    @Html.ValidationMessageFor(model => model.RLAddress)
                 </div>
             </div>
 
@@ -46,11 +55,13 @@
                 <label class="col-md-2">Contact No</label>
                 <div class="col-md-4">
                     <input type="text" class="form-control" name="ContactNumber" />
+                    @Html.ValidationMessageFor(model => model.ContactNumber)
                 </div>
 
                 <label class="col-md-2">Email</label>
                 <div class="col-md-4">
                     <input type="text" class="form-control" name="Email" />
+                    @Html.ValidationMessageFor(model => model.Email)
                 </div>
             </div>
 
@@ -59,60 +70,7 @@
                     <input type="submit" class="btn btn-primary btn-block" value="Submit" />
                 </div>
             </div>
-
-            @*<hr />
-        <h4><strong>Workers</strong></h4>
-
-        <div class="form-group">
-            <label class="col-md-2">Name</label>
-            <div class="col-md-4">
-                <input type="text" class="form-control" name="WorkerName" />
-            </div>
-            <label class="col-md-2">Trade Passed</label>
-            <div class="col-md-4">
-                <input type="text" class="form-control" name="TradePassed" />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="col-md-2">Passport No</label>
-            <div class="col-md-4">
-                <input type="text" class="form-control" name="PassportNo" />
-            </div>
-            <label class="col-md-2">Date of Expiry</label>
-            <div class="col-md-4">
-                <input type="date" class="form-control" name="ExpiryDate" />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="col-md-2">Date of Birth</label>
-            <div class="col-md-4">
-                <input type="date" class="form-control" name="BirthDate" />
-            </div>
-            <label class="col-md-2">Father's Name</label>
-            <div class="col-md-4">
-                <input type="text" class="form-control" name="FatherName" />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="col-md-2">Mother's Name</label>
-            <div class="col-md-4">
-                <input type="text" class="form-control" name="MotherName" />
-            </div>
-            <label class="col-md-2">Address</label>
-            <div class="col-md-4">
-                <textarea class="form-control" name="Address"></textarea>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-5 col-md-2">
-                <input type="button" class="btn btn-info btn-block" value="Add More Worker" />
-            </div>
-        </div>*@
-        </form>
+        }
     </div>
 </div>
 

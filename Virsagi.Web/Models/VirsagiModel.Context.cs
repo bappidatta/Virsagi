@@ -26,5 +26,6 @@ namespace Virsagi.Web.Models
         }
     
         public virtual DbSet<WorkerRequest> WorkerRequests { get; set; }
+        public virtual DbSet<Agent> Agents { get; set; }
     }
 }

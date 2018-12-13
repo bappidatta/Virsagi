@@ -74,6 +74,10 @@ p {
         width: auto;
     }
 
+.navbar-right > li > a {
+    padding: 10px 2px;
+}
+
 blockquote {
     border-left: 5px solid #F1F8FF;
     background-color: #F1F8FF;
