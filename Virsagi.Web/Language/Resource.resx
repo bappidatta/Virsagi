@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AboutUsContent1" xml:space="preserve">
+    <value>Virsagi is a Singapore registered company that has been involved in ther training and test of workers since 1998. Virsagi has several training centers in Dhaka and operates several BCA test centers.</value>
+  </data>
+  <data name="AboutUsContent2" xml:space="preserve">
+    <value>Virsagi has mobilized Bangladeshi workers for the market since 1988 and works with many Dhaka and Singapore Recruitment Agents. We are wholesale suppliers of Bangladeshi workers.</value>
+  </data>
+  <data name="Agents" xml:space="preserve">
+    <value>Agents</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>All Rights Reserved</value>
+  </data>
+  <data name="BottomContent" xml:space="preserve">
+    <value>There is no cost involved. We have the largest pool of Dhaka Agents and complement the sourcing efforts of Singapore Employers/Employment Agencies. We also complement the marketing efforts of Dhaka Agents, once you register with us, you have access to a very large pool of Singapore Employers/Employment Agents.</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="ContactUsContent" xml:space="preserve">
+    <value>Employers of Bangladeshi workers, Singapore LIcensed Employment Agents are welcome to browse this website. If you have an interest in employing workers from Bangladesh, please feel free to contact any of the Employment Agent listed below or make your enquiry by clicking</value>
+  </data>
+  <data name="How" xml:space="preserve">
+    <value>How the Program Works</value>
+  </data>
+  <data name="RegisterWorkers" xml:space="preserve">
+    <value>Registering Workers</value>
+  </data>
+  <data name="RegisterWorkersContent" xml:space="preserve">
+    <value>Only Dhaka Licensed Employment Agents can register their workers on this website for the purpose of seeking jobs in Singapore. Once your workers are registered, there is no further need for you to market their bios, since the website will do this work for you. To register your workers, simply fill in the form below and click submit button.</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Requests</value>
+  </data>
+  <data name="RequestWorkers" xml:space="preserve">
+    <value>Requesting Workers</value>
+  </data>
+  <data name="RequestWorkersContent" xml:space="preserve">
+    <value>You can use the online form to request for workers. A representative of an Employment Agency will be in touch within one(1) day to confirm your request.</value>
+  </data>
+  <data name="Step1" xml:space="preserve">
+    <value>Step 1</value>
+  </data>
+  <data name="Step1Content" xml:space="preserve">
+    <value>Workers intending to work in Singapore must register their bios with any Dhaka Licensed Recruitment Agent.</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Step 2</value>
+  </data>
+  <data name="Step2Content" xml:space="preserve">
+    <value>Dhaka Licensed Recruitment Agent will then register their workers on this website.</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Step 3</value>
+  </data>
+  <data name="Step3Content" xml:space="preserve">
+    <value>Website agents market the workers to Licensed Singapore Recruitment Agents/Employers.</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Step 4</value>
+  </data>
+  <data name="Step4Content" xml:space="preserve">
+    <value>When IPAs are approved, website agents will coordinate with Dhaka Agent/S’pore Agent or Employer to bring workers to Singapore.</value>
+  </data>
+  <data name="Why" xml:space="preserve">
+    <value>Why you should use Virsagi website</value>
+  </data>
+  <data name="WhyContent" xml:space="preserve">
+    <value>The most time consuming work for a Singapore Agent/Employer is to source for reliable Dhaka agents who have workers bios for placements. The most time consuming work for a Dhaka Agent is to source for reliable Singapore agents/Employers. Our own contacts are usually limited. By using the Virsagi website, the job is done for you. Thus, Singapore Agents need only to spend time on procuring orders from Employers, and Dhaka Agents need only to spend time on sourcing for more qualified workers. Using the Virsagi website represents a win-win for both Dhaka and Singapore Agents/Employers.</value>
+  </data>
+</root>

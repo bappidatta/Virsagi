@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>关于我们</value>
+  </data>
+  <data name="AboutUsContent1" xml:space="preserve">
+    <value>Virsagi 是一间新加坡的注册公司並从1998年开始就提供培训与测试员工。本公司在达卡有几间培训中心和测试中心。</value>
+  </data>
+  <data name="AboutUsContent2" xml:space="preserve">
+    <value>Virsagi 从1988年开始就引进孟加拉员工们，並且和衆多的达卡和新加坡的中介公司合作。我们是大规模批发孟加拉员工的合法资深公司。</value>
+  </data>
+  <data name="Agents" xml:space="preserve">
+    <value>Agents</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>权利保留</value>
+  </data>
+  <data name="BottomContent" xml:space="preserve">
+    <value>完全是免费的。本公司有达卡最多的中介公司资料而能满足新加坡雇主们/中介公司的需求。我们也配合了达卡中介公司们的需求，当您向本公司注册，将会接冾到大量的新加坡雇主们/劳工中介公司。</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>联系我们</value>
+  </data>
+  <data name="ContactUsContent" xml:space="preserve">
+    <value>聘请孟加拉员工的雇主们，新加坡的执照合法中介公司们，欢迎你们来遊览此网站。如果您有兴趣聘请孟加拉的员工们，请您随时接冾以下名单中的任何中介公司或者在此按下提交。</value>
+  </data>
+  <data name="How" xml:space="preserve">
+    <value>此程序如何操作</value>
+  </data>
+  <data name="RegisterWorkers" xml:space="preserve">
+    <value>登记员工</value>
+  </data>
+  <data name="RegisterWorkersContent" xml:space="preserve">
+    <value>只有达卡的执照中介公司可以把他们想到新加坡寻找工作的员工们登记到此网站。当员工们被登记后，您不需要再推荐他们的资料，因为此网站会为您操作。如要登记您的员工们只需要填妥以下的表格提交就行了。</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Requests</value>
+  </data>
+  <data name="RequestWorkers" xml:space="preserve">
+    <value>寻求员工</value>
+  </data>
+  <data name="RequestWorkersContent" xml:space="preserve">
+    <value>您可以使用网上的表格来申请员工。中介公司的职员们将会在一天内与您接冾並确定您的订单与需求。</value>
+  </data>
+  <data name="Step1" xml:space="preserve">
+    <value>第一步</value>
+  </data>
+  <data name="Step1Content" xml:space="preserve">
+    <value>当员工们要在新加坡寻找工作时需要把他们的资料登记在任何达卡的正规执照中介公司。</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>第二步</value>
+  </data>
+  <data name="Step2Content" xml:space="preserve">
+    <value>达卡的正规执照中介公司将把员工资料登记入本公司网站</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>第三步</value>
+  </data>
+  <data name="Step3Content" xml:space="preserve">
+    <value>公司网站介绍员工们给新加坡的合法执照中介公司/雇主们</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>第4步</value>
+  </data>
+  <data name="Step4Content" xml:space="preserve">
+    <value>当IPAs批准后，本公司网站将与达卡中介/新加坡中介或雇主安排将员工们带入新加坡。</value>
+  </data>
+  <data name="Why" xml:space="preserve">
+    <value>为什么您应当使用Virsagi网站</value>
+  </data>
+  <data name="WhyContent" xml:space="preserve">
+    <value>对于新加坡的劳工中介来说最消耗时间是寻找一间可靠的达卡中介並且手中有员工的资料来补充需求。对于达卡的中介来说则是寻找可靠的新加坡中介/雇主。基本上这些中介们的联络网都是有限的。当您使用我们的网站时，工作巳为您完成。因此新加坡中介只需要花时间完成雇主们的订单而达卡的中介只需要花时间寻找更多合格的员工。应用本公司的网站可以为达卡和新加坡的中介/雇主创造双赢的局面。</value>
+  </data>
+</root>

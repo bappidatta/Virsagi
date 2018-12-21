@@ -3,15 +3,10 @@
     ViewBag.Title = "Registering Workers";
 }
 
-<h3 class="text-primary underline">Registering Workers</h3>
+<h3 class="text-primary underline">@Virsagi.Web.Language.Resource.RegisterWorkers</h3>
 
 <blockquote>
-    <p>
-        Only Dhaka Licensed Employment Agents can register their workers on this website
-        for the purpose of seeking jobs in Singapore. Once your workers are registered,
-        there is no further need for you to market their bios, since the website will do this work for you.
-        To register your workers, simply fill in the form below and click submit button.
-    </p>
+    <p>@Virsagi.Web.Language.Resource.RegisterWorkersContent</p>
 </blockquote>
 
 @if (Convert.ToInt16(TempData["isSuccess"]) == 1)

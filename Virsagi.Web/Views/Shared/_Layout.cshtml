@@ -26,27 +26,27 @@
                 @if (!Request.IsAuthenticated)
                 {
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Registering Workers", "Index", "RegisterWorkers")</li>
-                        <li>@Html.ActionLink("Requesting Workers", "Index", "RequestWorkers")</li>
-                        <li>@Html.ActionLink("About Us", "About", "Home")</li>
-                        <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        <li>@Html.ActionLink(Virsagi.Web.Language.Resource.RegisterWorkers, "Index", "RegisterWorkers")</li>
+                        <li>@Html.ActionLink(Virsagi.Web.Language.Resource.RequestWorkers, "Index", "RequestWorkers")</li>
+                        <li>@Html.ActionLink(Virsagi.Web.Language.Resource.AboutUs, "About", "Home")</li>
+                        <li>@Html.ActionLink(Virsagi.Web.Language.Resource.ContactUs, "Contact", "Home")</li>
                     </ul>
                 }
 
                 @if (Request.IsAuthenticated)
                 {
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Agents", "GetAllAgents", "Admin")</li>
-                        <li>@Html.ActionLink("Requests", "GetAllRequests", "Admin")</li>
+                        <li>@Html.ActionLink(Virsagi.Web.Language.Resource.Agents, "GetAllAgents", "Admin")</li>
+                        <li>@Html.ActionLink(Virsagi.Web.Language.Resource.Requests, "GetAllRequests", "Admin")</li>
                     </ul>
 
                     @Html.Partial("_LogInPartial")
                 }
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("En", "Index", "Home")</li>
-                    <li>@Html.ActionLink("| 中文 |", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Bn", "Index", "Home")</li>
+                    <li>@Html.ActionLink("En", "Change", "Home", new { lnAbbrevation = "en" }, null)</li>
+                    <li>@Html.ActionLink("| 中文 |", "Change", "Home", new { lnAbbrevation = "zh-CN" }, null)</li>
+                    <li>@Html.ActionLink("Bn", "Change", "Home", new { lnAbbrevation = "bn" }, null)</li>
                 </ul>
             </div>
         </div>
@@ -55,7 +55,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Virsagi</p>
+            <p>&copy; @DateTime.Now.Year - @Virsagi.Web.Language.Resource.AllRightsReserved</p>
         </footer>
     </div>
 
