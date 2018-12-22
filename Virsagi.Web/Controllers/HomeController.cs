@@ -55,7 +55,7 @@ namespace Virsagi.Web.Controllers
             cookie.Value = lnAbbrevation;
             Response.Cookies.Add(cookie);
 
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }
