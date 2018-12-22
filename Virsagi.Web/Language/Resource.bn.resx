@@ -121,72 +121,72 @@
     <value>আমাদের সম্পর্কে</value>
   </data>
   <data name="AboutUsContent1" xml:space="preserve">
-    <value>Virsagi is a Singapore registered company that has been involved in ther training and test of workers since 1998. Virsagi has several training centers in Dhaka and operates several BCA test centers.</value>
+    <value>ভারসাগী একটি সিঙ্গাপুরে নিবন্ধিত কোম্পানী। যাহা ১৯৯৮ সাল থেকে শ্রমিকদের ট্রেনিং ও পরীক্ষার সহিত জড়িত আছে। ভারসাগীর ঢাকায় অনেক ট্রেনিং সেন্টার আছে এবং অনেকগুলি বিসিএ টেস্ট সেন্টার পরিচালনা করে।</value>
   </data>
   <data name="AboutUsContent2" xml:space="preserve">
-    <value>Virsagi has mobilized Bangladeshi workers for the market since 1988 and works with many Dhaka and Singapore Recruitment Agents. We are wholesale suppliers of Bangladeshi workers.</value>
+    <value>১৯৯৮ সাল থেকে ভারসাগী বাংলাদেশী শ্রমিকদেরকে বিদেশে মার্কেটিং করণের জন্য একত্রিত করে আসছে এবং ঢাকা ও সিঙ্গাপুর নিয়োগকারী অনেক এজেন্টদের সাথে কাজ করে আসছে। আমরা বাংলাদেশী শ্রমিকদের পাইকারী সরবরাহকারী।</value>
   </data>
   <data name="Agents" xml:space="preserve">
     <value>Agents</value>
   </data>
   <data name="AllRightsReserved" xml:space="preserve">
-    <value>All Rights Reserved</value>
+    <value>সমস্ত স্বত্ব সংরক্ষিত</value>
   </data>
   <data name="BottomContent" xml:space="preserve">
-    <value>There is no cost involved. We have the largest pool of Dhaka Agents and complement the sourcing efforts of Singapore Employers/Employment Agencies. We also complement the marketing efforts of Dhaka Agents, once you register with us, you have access to a very large pool of Singapore Employers/Employment Agents.</value>
+    <value>ইহাতে কোন অর্থ ব্যয় জড়িত নাই। আমাদের ঢাকা প্রতিনিধির নিকট সর্ববৃহৎ যৌথ কাজের ভান্ডার আছে এবং সম্পূর্ণ করার জন্য সিঙ্গাপুর নিয়োগকারী/ নিয়োগ প্রতিনিধির সংগ্রহের পরিপূরক আছে। আপনি একবার আমাদের সহিত নিবন্ধন করিলে আপনি সিঙ্গাপুর নিয়োগকারী/নিয়োগ প্রতিনিধির খুব বিরাট ভান্ডারে প্রবেশ করিলেন।</value>
   </data>
   <data name="ContactUs" xml:space="preserve">
-    <value>Contact Us</value>
+    <value>আমাদের সহিত যোগাযোগ</value>
   </data>
   <data name="ContactUsContent" xml:space="preserve">
-    <value>Employers of Bangladeshi workers, Singapore LIcensed Employment Agents are welcome to browse this website. If you have an interest in employing workers from Bangladesh, please feel free to contact any of the Employment Agent listed below or make your enquiry by clicking</value>
+    <value>বাংলাদেশী শ্রমিকদের নিয়োগকারীরা, সিঙ্গাপুরে অনুমোদিত নিয়োগকারী প্রতিনিধি আমাদের ওয়েবসাইট ব্রাউজ করার জন্য অনুরোধ করা যাচ্ছে। আপনি যদি বাংলাদেশের শ্রমিকদের নিয়োগ করার জন্য আগ্রহ থাকে, তাহলে আপনি নিঃসঙ্কোচে নিন্মে তালিকাভুক্ত যেকোন নিয়োগকারী প্রতিনিধির সহিত খোলাখুলিভাবে যোগাযোগ করতে পারেন অথবা এখানে ক্লিক করে খোঁজ নিতে পারেন।</value>
   </data>
   <data name="How" xml:space="preserve">
-    <value>How the Program Works</value>
+    <value>অত্র প্রোগ্রামগুলি কিভাবে কাজ করে</value>
   </data>
   <data name="RegisterWorkers" xml:space="preserve">
-    <value>Registering Workers</value>
+    <value>শ্রমিক নিবন্ধন</value>
   </data>
   <data name="RegisterWorkersContent" xml:space="preserve">
-    <value>Only Dhaka Licensed Employment Agents can register their workers on this website for the purpose of seeking jobs in Singapore. Once your workers are registered, there is no further need for you to market their bios, since the website will do this work for you. To register your workers, simply fill in the form below and click submit button.</value>
+    <value>শ্রমকিদরে শুধুমাত্র ঢাকার অনুমোদিত নিয়োগ প্রতিনিধি সিঙ্গাপুরে চাকুরী খোঁজার উদ্দেশ্যে এই ওয়েব সাইটে তাহাদের শ্রমিকদের নাম নিবন্ধন করিতে পারিবে। একবার আপনার শ্রমিকদের নিবন্ধন করিলে তাহাদের জীবন বৃত্তান্ত মার্কেটিং করিবে। আপনার আর খোঁজার প্রয়োজন হইবে না।  যেহেতু ওয়েব সাইট আপনার কাজটি করিয়া দিবে, সেহেতু আপনার শ্রমিকদের নিবন্ধন করিতে সাধারণ ভাবে নিন্মের ফরম পূরণ করিবেন এবং এই বাটনে ক্লিক করিবেন।</value>
   </data>
   <data name="Requests" xml:space="preserve">
     <value>Requests</value>
   </data>
   <data name="RequestWorkers" xml:space="preserve">
-    <value>Requesting Workers</value>
+    <value>শ্রমিকদের জন্য আবেদন</value>
   </data>
   <data name="RequestWorkersContent" xml:space="preserve">
-    <value>You can use the online form to request for workers. A representative of an Employment Agency will be in touch within one(1) day to confirm your request.</value>
+    <value>আপনি অনলাইন ফরম ব্যবহার করিয়া শ্রমিকদের জন্য অনুরোধ করিতে পারিবেন। নিয়োগকারী প্রতিনিধির একজন প্রতিনিধি আপনার সঙ্গে একদিন থাকিবে এবং আপনার অনুরোধকে নিশ্চিত করিবেন।</value>
   </data>
   <data name="Step1" xml:space="preserve">
-    <value>Step 1</value>
+    <value>ধাপ ১</value>
   </data>
   <data name="Step1Content" xml:space="preserve">
-    <value>Workers intending to work in Singapore must register their bios with any Dhaka Licensed Recruitment Agent.</value>
+    <value>সিঙ্গাপুরে কাজ করতে আগ্রহী শ্রমিকগণ তাহাদের জীবন বৃত্তান্ত অবশ্যই ঢাকায় অনুমোদিত নিয়োগকারী প্রতিনিধির নিকট নিবন্ধন করিবে।</value>
   </data>
   <data name="Step2" xml:space="preserve">
-    <value>Step 2</value>
+    <value>ধাপ ২</value>
   </data>
   <data name="Step2Content" xml:space="preserve">
-    <value>Dhaka Licensed Recruitment Agent will then register their workers on this website.</value>
+    <value>ঢাকায় অনুমোদন প্রাপ্ত নিয়োগকারী প্রতিনিধি তখন শ্রমিকদের নাম এই ওয়েব সাইটে নিবন্ধন করিবে।</value>
   </data>
   <data name="Step3" xml:space="preserve">
-    <value>Step 3</value>
+    <value>ধাপ ৩</value>
   </data>
   <data name="Step3Content" xml:space="preserve">
-    <value>Website agents market the workers to Licensed Singapore Recruitment Agents/Employers.</value>
+    <value>এই ওয়েবসাইট মার্কেট শ্রমিকদের সিঙ্গাপুরে অনুমোদিত নিয়োগকারী প্রতিনিধি / নিয়োগকারী</value>
   </data>
   <data name="Step4" xml:space="preserve">
-    <value>Step 4</value>
+    <value>ধাপ ৪</value>
   </data>
   <data name="Step4Content" xml:space="preserve">
-    <value>When IPAs are approved, website agents will coordinate with Dhaka Agent/S’pore Agent or Employer to bring workers to Singapore.</value>
+    <value>যখন আইপিএ সমূহ অনুমোদিত হইবে, তখন এই ওয়েব সাইট ঢাকায় প্রতিনিধির সহিত সমন্বয় সাধন করিবে অথবা নিয়োগকারীগণ সিঙ্গাপুরে শ্রমিক লইয়া আসিবে।</value>
   </data>
   <data name="Why" xml:space="preserve">
-    <value>Why you should use Virsagi website</value>
+    <value>আপনি কেন ভারসাগী ওয়েবসাইট ব্যবহার করবেন</value>
   </data>
   <data name="WhyContent" xml:space="preserve">
-    <value>The most time consuming work for a Singapore Agent/Employer is to source for reliable Dhaka agents who have workers bios for placements. The most time consuming work for a Dhaka Agent is to source for reliable Singapore agents/Employers. Our own contacts are usually limited. By using the Virsagi website, the job is done for you. Thus, Singapore Agents need only to spend time on procuring orders from Employers, and Dhaka Agents need only to spend time on sourcing for more qualified workers. Using the Virsagi website represents a win-win for both Dhaka and Singapore Agents/Employers.</value>
+    <value>বেশির ভাগ সময় কাজে ব্যবহারের জন্য শ্রমিক সিঙ্গাপুরের প্রতিনিধি / নিয়োগকারীকে ঢাকার বিশ্বস্ত প্রতিনিধির জন্য তথ্য সরবরাহকারী ব্যক্তিকে খুঁজতে হয়, স্থাপনের জন্য যাহার নিকট শ্রমিকের জীবন বৃত্তান্ত আছে। বেশির ভাগ ক্ষেত্রে কাজে শ্রমিকদের ব্যবহারের জন্য ঢাকার প্রতিনিধিকে সিঙ্গাপুরের বিশ্বস্ত প্রতিনিধি / নিয়োগকারীকে খুঁজতে হয়। আমাদের নিজস্ব যোগাযোগগুলি সাধারণত সীমিত। ভারসাগী ওয়েবসাইট ব্যবহার করে আপনারা কাজ করতে পারবেন। সুতরাং সিঙ্গাপুর প্রতিনিধি শুধু প্রয়োজনে সময় ব্যয় করে নিয়োগকারীদের থেকে সংগ্রহের আদেশ যোগার করা এবং ঢাকা প্রতিনিধির শুধু প্রয়োজন আরও যোগ্য শ্রমিক খোজার জন্য সময় ব্যয় করা। ভারসাগী ওয়েবসাইট ব্যবহার করিয়া ঢাকা এবং সিঙ্গাপুর উভয় প্রতিনিধি/নিয়োগের জন্য জয় জয় প্রতিনিধিত্ব করে।</value>
   </data>
 </root>
