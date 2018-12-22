@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Virsagi.Web.ViewModels.NewsViewModel
+@{
     ViewBag.Title = "Home";
 }
 
@@ -17,25 +18,16 @@
 <div class="row">
     <h1 class="text-center">NEWS</h1>
     <div class="col-md-4">
-        <h3 class="text-primary underline">New OTC Test Quota rules</h3>
-        <p>
-            From July 2018 test, each OTC can test 12 workers per trade,
-            with a max number of 100 workers tested per month.
-        </p>
+        <h3 class="text-primary underline">@Model.NewsHeadline1</h3>
+        <p>@Model.NewsDetails1</p>
     </div>
     <div class="col-md-4">
-        <h3 class="text-primary underline">New OTC Test Quota rules</h3>
-        <p>
-            From July 2018 test, each OTC can test 12 workers per trade,
-            with a max number of 100 workers tested per month.
-        </p>
+        <h3 class="text-primary underline">@Model.NewsHeadline2</h3>
+        <p>@Model.NewsDetails2</p>
     </div>
     <div class="col-md-4">
-        <h3 class="text-primary underline">New OTC Test Quota rules</h3>
-        <p>
-            From July 2018 test, each OTC can test 12 workers per trade,
-            with a max number of 100 workers tested per month.
-        </p>
+        <h3 class="text-primary underline">@Model.NewsHeadline3</h3>
+        <p>@Model.NewsDetails3</p>
     </div>
 </div>
 

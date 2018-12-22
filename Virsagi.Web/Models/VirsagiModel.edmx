@@ -16,6 +16,19 @@
           <Property Name="ContactNumber" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="500" Nullable="false" />
         </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="NewsID" />
+          </Key>
+          <Property Name="NewsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NewsHeadline1" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="NewsDetails1" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="NewsHeadline2" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="NewsDetails2" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="NewsHeadline3" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="NewsDetails3" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="LastUpdatedBy" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="WorkerRequest">
           <Key>
             <PropertyRef Name="WorkerRequestID" />
@@ -33,6 +46,7 @@
         </EntityType>
         <EntityContainer Name="VirsagiModelStoreContainer">
           <EntitySet Name="Agent" EntityType="Self.Agent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WorkerRequest" EntityType="Self.WorkerRequest" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -42,6 +56,7 @@
         <EntityContainer Name="VirsagiContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="WorkerRequests" EntityType="VirsagiModel.WorkerRequest" />
           <EntitySet Name="Agents" EntityType="VirsagiModel.Agent" />
+          <EntitySet Name="News" EntityType="VirsagiModel.News" />
         </EntityContainer>
         <EntityType Name="WorkerRequest">
           <Key>
@@ -68,6 +83,19 @@
           <Property Name="RLAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="ContactNumber" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="NewsID" />
+          </Key>
+          <Property Name="NewsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NewsHeadline1" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NewsDetails1" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NewsHeadline2" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NewsDetails2" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NewsHeadline3" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="NewsDetails3" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdatedBy" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -100,6 +128,20 @@
                 <ScalarProperty Name="RLNo" ColumnName="RLNo" />
                 <ScalarProperty Name="RLName" ColumnName="RLName" />
                 <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="VirsagiModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="LastUpdatedBy" ColumnName="LastUpdatedBy" />
+                <ScalarProperty Name="NewsDetails3" ColumnName="NewsDetails3" />
+                <ScalarProperty Name="NewsHeadline3" ColumnName="NewsHeadline3" />
+                <ScalarProperty Name="NewsDetails2" ColumnName="NewsDetails2" />
+                <ScalarProperty Name="NewsHeadline2" ColumnName="NewsHeadline2" />
+                <ScalarProperty Name="NewsDetails1" ColumnName="NewsDetails1" />
+                <ScalarProperty Name="NewsHeadline1" ColumnName="NewsHeadline1" />
+                <ScalarProperty Name="NewsID" ColumnName="NewsID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -51,5 +51,27 @@ namespace Virsagi.Web.Controllers
 
             return View(data);
         }
+
+        public ActionResult EditNews()
+        {
+            db = new VirsagiContext();
+
+            var data = db.News.FirstOrDefault();
+
+            return View(data);
+        }
+
+        [HttpPost]
+        public ActionResult EditNews(News news)
+        {
+            db = new VirsagiContext();
+
+            news.LastUpdatedBy = DateTime.Now;
+            db.News.Add(news);
+            db.Entry(news).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+
+            return View(news);
+        }
     }
 }
