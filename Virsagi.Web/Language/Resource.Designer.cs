@@ -70,7 +70,7 @@ namespace Virsagi.Web.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Virsagi is a Singapore registered company that has been involved in ther training and test of workers since 1998. Virsagi has several training centers in Dhaka and operates several BCA test centers..
+        ///   Looks up a localized string similar to Virsagi is a Singapore registered company that has been involved in the training and test of workers since 1998. Virsagi has several training centers in Dhaka and operates several BCA test centers..
         /// </summary>
         public static string AboutUsContent1 {
             get {
@@ -79,7 +79,7 @@ namespace Virsagi.Web.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Virsagi has mobilized Bangladeshi workers for the market since 1988 and works with many Dhaka and Singapore Recruitment Agents. We are wholesale suppliers of Bangladeshi workers..
+        ///   Looks up a localized string similar to Virsagi has mobilized Bangladeshi workers for the market since 1998 and works with many Dhaka and Singapore Recruitment Agents. We are wholesale suppliers of Bangladeshi workers..
         /// </summary>
         public static string AboutUsContent2 {
             get {
@@ -124,7 +124,7 @@ namespace Virsagi.Web.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Employers of Bangladeshi workers, Singapore LIcensed Employment Agents are welcome to browse this website. If you have an interest in employing workers from Bangladesh, please feel free to contact any of the Employment Agent listed below or make your enquiry by clicking.
+        ///   Looks up a localized string similar to Employers of Bangladeshi workers, Singapore LIcensed Employment Agents are welcome to browse this website. If you have an interest in employing workers from Bangladesh, please feel free to contact any of the Employment Agent listed below..
         /// </summary>
         public static string ContactUsContent {
             get {
