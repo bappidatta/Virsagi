@@ -124,7 +124,7 @@ namespace Virsagi.Web.Language {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Employers of Bangladeshi workers, Singapore LIcensed Employment Agents are welcome to browse this website. If you have an interest in employing workers from Bangladesh, please feel free to contact any of the Employment Agent listed below..
+        ///   Looks up a localized string similar to Employers of Bangladeshi workers, Singapore LIcensed Employment Agents are welcome to browse this website. If you have an interest in employing workers from Bangladesh, please feel free to contact any of the Employment Agents listed below..
         /// </summary>
         public static string ContactUsContent {
             get {
