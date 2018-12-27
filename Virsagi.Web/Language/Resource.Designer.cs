@@ -142,6 +142,15 @@ namespace Virsagi.Web.Language {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Online Form Submission.
+        /// </summary>
+        public static string OnlineFormSubmission {
+            get {
+                return ResourceManager.GetString("OnlineFormSubmission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registering Workers.
         /// </summary>
         public static string RegisterWorkers {
@@ -156,6 +165,15 @@ namespace Virsagi.Web.Language {
         public static string RegisterWorkersContent {
             get {
                 return ResourceManager.GetString("RegisterWorkersContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registration Form.
+        /// </summary>
+        public static string RegistrationForm {
+            get {
+                return ResourceManager.GetString("RegistrationForm", resourceCulture);
             }
         }
         

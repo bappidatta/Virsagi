@@ -189,4 +189,10 @@
   <data name="WhyContent" xml:space="preserve">
     <value>The most time consuming work for a Singapore Agent/Employer is to source for reliable Dhaka agents who have workers bios for placements. The most time consuming work for a Dhaka Agent is to source for reliable Singapore agents/Employers. Our own contacts are usually limited. By using the Virsagi website, the job is done for you. Thus, Singapore Agents need only to spend time on procuring orders from Employers, and Dhaka Agents need only to spend time on sourcing for more qualified workers. Using the Virsagi website represents a win-win for both Dhaka and Singapore Agents/Employers.</value>
   </data>
+  <data name="OnlineFormSubmission" xml:space="preserve">
+    <value>Online Form Submission</value>
+  </data>
+  <data name="RegistrationForm" xml:space="preserve">
+    <value>Registration Form</value>
+  </data>
 </root>

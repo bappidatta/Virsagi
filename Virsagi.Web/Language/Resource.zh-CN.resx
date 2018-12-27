@@ -189,4 +189,10 @@
   <data name="WhyContent" xml:space="preserve">
     <value>对于新加坡的劳工中介来说最消耗时间是寻找一间可靠的达卡中介並且手中有员工的资料来补充需求。对于达卡的中介来说则是寻找可靠的新加坡中介/雇主。基本上这些中介们的联络网都是有限的。当您使用我们的网站时，工作巳为您完成。因此新加坡中介只需要花时间完成雇主们的订单而达卡的中介只需要花时间寻找更多合格的员工。应用本公司的网站可以为达卡和新加坡的中介/雇主创造双赢的局面。</value>
   </data>
+  <data name="OnlineFormSubmission" xml:space="preserve">
+    <value>提交网上表格</value>
+  </data>
+  <data name="RegistrationForm" xml:space="preserve">
+    <value>报名表格</value>
+  </data>
 </root>
