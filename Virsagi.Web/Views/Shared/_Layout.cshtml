@@ -36,6 +36,7 @@
                 @if (Request.IsAuthenticated)
                 {
                     <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Dashboard", "Dashboard", "Admin")</li>
                         <li>@Html.ActionLink(Virsagi.Web.Language.Resource.Agents, "GetAllAgents", "Admin")</li>
                         <li>@Html.ActionLink(Virsagi.Web.Language.Resource.Requests, "GetAllRequests", "Admin")</li>
                         <li>@Html.ActionLink("News", "EditNews", "Admin")</li>

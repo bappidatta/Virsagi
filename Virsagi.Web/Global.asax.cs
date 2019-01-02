@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Virsagi.Web.Models;
 
 namespace Virsagi.Web
 {
@@ -32,6 +33,20 @@ namespace Virsagi.Web
             {
                 Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en");
                 Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
+            }
+
+            AddHitCount();
+        }
+
+        private void AddHitCount()
+        {
+            using (VirsagiContext db = new VirsagiContext())
+            {
+                var hitCounter = db.HitCounters.FirstOrDefault();
+                hitCounter.TotalCount++;
+                db.HitCounters.Add(hitCounter);
+                db.Entry(hitCounter).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
             }
         }
     }

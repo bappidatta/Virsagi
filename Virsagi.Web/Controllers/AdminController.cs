@@ -13,6 +13,15 @@ namespace Virsagi.Web.Controllers
     {
         private VirsagiContext db;
 
+        public ActionResult Dashboard()
+        {
+            db = new VirsagiContext();
+            var data = db.HitCounters.FirstOrDefault();
+            ViewBag.totalCount = data.TotalCount;
+
+            return View();
+        }
+
         public ActionResult GetAllAgents()
         {
             db = new VirsagiContext();

@@ -16,6 +16,13 @@
           <Property Name="ContactNumber" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="500" Nullable="false" />
         </EntityType>
+        <EntityType Name="HitCounter">
+          <Key>
+            <PropertyRef Name="HitCounterID" />
+          </Key>
+          <Property Name="HitCounterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TotalCount" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="News">
           <Key>
             <PropertyRef Name="NewsID" />
@@ -46,6 +53,7 @@
         </EntityType>
         <EntityContainer Name="VirsagiModelStoreContainer">
           <EntitySet Name="Agent" EntityType="Self.Agent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HitCounter" EntityType="Self.HitCounter" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WorkerRequest" EntityType="Self.WorkerRequest" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -57,6 +65,7 @@
           <EntitySet Name="WorkerRequests" EntityType="VirsagiModel.WorkerRequest" />
           <EntitySet Name="Agents" EntityType="VirsagiModel.Agent" />
           <EntitySet Name="News" EntityType="VirsagiModel.News" />
+          <EntitySet Name="HitCounters" EntityType="VirsagiModel.HitCounter" />
         </EntityContainer>
         <EntityType Name="WorkerRequest">
           <Key>
@@ -96,6 +105,13 @@
           <Property Name="NewsHeadline3" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="NewsDetails3" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="LastUpdatedBy" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="HitCounter">
+          <Key>
+            <PropertyRef Name="HitCounterID" />
+          </Key>
+          <Property Name="HitCounterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TotalCount" Type="Int32" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -142,6 +158,14 @@
                 <ScalarProperty Name="NewsDetails1" ColumnName="NewsDetails1" />
                 <ScalarProperty Name="NewsHeadline1" ColumnName="NewsHeadline1" />
                 <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HitCounters">
+            <EntityTypeMapping TypeName="VirsagiModel.HitCounter">
+              <MappingFragment StoreEntitySet="HitCounter">
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="HitCounterID" ColumnName="HitCounterID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

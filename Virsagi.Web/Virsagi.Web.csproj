@@ -206,6 +206,9 @@
     <Compile Include="Models\Agent.cs">
       <DependentUpon>VirsagiModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HitCounter.cs">
+      <DependentUpon>VirsagiModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\News.cs">
@@ -318,6 +321,7 @@
     <Content Include="Views\Admin\GetAllAgents.cshtml" />
     <Content Include="Views\Admin\GetAllRequests.cshtml" />
     <Content Include="Views\Admin\EditNews.cshtml" />
+    <Content Include="Views\Admin\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
