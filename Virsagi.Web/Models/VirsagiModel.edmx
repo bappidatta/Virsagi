@@ -15,6 +15,7 @@
           <Property Name="RLAddress" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="ContactNumber" Type="varchar" MaxLength="250" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
         </EntityType>
         <EntityType Name="HitCounter">
           <Key>
@@ -63,9 +64,9 @@
       <Schema Namespace="VirsagiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="VirsagiContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="WorkerRequests" EntityType="VirsagiModel.WorkerRequest" />
-          <EntitySet Name="Agents" EntityType="VirsagiModel.Agent" />
           <EntitySet Name="News" EntityType="VirsagiModel.News" />
           <EntitySet Name="HitCounters" EntityType="VirsagiModel.HitCounter" />
+          <EntitySet Name="Agents" EntityType="VirsagiModel.Agent" />
         </EntityContainer>
         <EntityType Name="WorkerRequest">
           <Key>
@@ -81,17 +82,6 @@
           <Property Name="Details" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="SpecialRequest" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
-        </EntityType>
-        <EntityType Name="Agent">
-          <Key>
-            <PropertyRef Name="AgentID" />
-          </Key>
-          <Property Name="AgentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RLName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="RLNo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="RLAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="ContactNumber" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="News">
           <Key>
@@ -112,6 +102,18 @@
           </Key>
           <Property Name="HitCounterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TotalCount" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="AgentID" />
+          </Key>
+          <Property Name="AgentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RLName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="RLNo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="RLAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ContactNumber" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -135,18 +137,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Agents">
-            <EntityTypeMapping TypeName="VirsagiModel.Agent">
-              <MappingFragment StoreEntitySet="Agent">
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
-                <ScalarProperty Name="RLAddress" ColumnName="RLAddress" />
-                <ScalarProperty Name="RLNo" ColumnName="RLNo" />
-                <ScalarProperty Name="RLName" ColumnName="RLName" />
-                <ScalarProperty Name="AgentID" ColumnName="AgentID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="News">
             <EntityTypeMapping TypeName="VirsagiModel.News">
               <MappingFragment StoreEntitySet="News">
@@ -166,6 +156,19 @@
               <MappingFragment StoreEntitySet="HitCounter">
                 <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
                 <ScalarProperty Name="HitCounterID" ColumnName="HitCounterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Agents">
+            <EntityTypeMapping TypeName="VirsagiModel.Agent">
+              <MappingFragment StoreEntitySet="Agent">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="RLAddress" ColumnName="RLAddress" />
+                <ScalarProperty Name="RLNo" ColumnName="RLNo" />
+                <ScalarProperty Name="RLName" ColumnName="RLName" />
+                <ScalarProperty Name="AgentID" ColumnName="AgentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

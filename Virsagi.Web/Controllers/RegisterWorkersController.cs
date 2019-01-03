@@ -30,7 +30,8 @@ namespace Virsagi.Web.Controllers
                     RLNo = vm.RLNo,
                     RLAddress = vm.RLAddress,
                     ContactNumber = vm.ContactNumber,
-                    Email = vm.Email
+                    Email = vm.Email,
+                    CreatedDate = vm.CreatedDate
                 };
 
                 db.Agents.Add(agent);

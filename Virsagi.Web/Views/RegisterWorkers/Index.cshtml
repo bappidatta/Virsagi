@@ -40,9 +40,15 @@
 
             <div class="form-group">
                 <label class="col-md-2">Address of R.L.</label>
-                <div class="col-md-10">
-                    <textarea class="form-control" name="RLAddress"></textarea>
+                <div class="col-md-4">
+                    <textarea class="form-control" name="RLAddress" rows="4"></textarea>
                     @Html.ValidationMessageFor(model => model.RLAddress)
+                </div>
+
+                <label class="col-md-2">Date</label>
+                <div class="col-md-4">
+                    <input type="date" class="form-control" name="CreatedDate" />
+                    @Html.ValidationMessageFor(model => model.CreatedDate)
                 </div>
             </div>
 

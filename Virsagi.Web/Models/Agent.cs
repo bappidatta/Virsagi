@@ -20,5 +20,6 @@ namespace Virsagi.Web.Models
         public string RLAddress { get; set; }
         public string ContactNumber { get; set; }
         public string Email { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
     }
 }

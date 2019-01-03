@@ -6,6 +6,18 @@
 
 <h3 class="text-primary underline">@ViewBag.Title</h3>
 
+@using (Html.BeginForm("GetAllRequests", "Admin", FormMethod.Get))
+{
+    <div class="row">
+        <div class="col-md-offset-7 col-md-3">
+            <input type="date" class="form-control" name="filterDate" />
+        </div>
+        <div class="col-md-2">
+            <input type="submit" value="Search" class="btn btn-block btn-primary" />
+        </div>
+    </div>
+}
+
 <table class="table table-bordered table-striped table-hover">
     <tr>
         <th>

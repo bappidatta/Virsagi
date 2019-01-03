@@ -24,5 +24,8 @@ namespace Virsagi.Web.ViewModels
 
         [Required(AllowEmptyStrings = false)]
         public string Email { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:M}")]
+        public DateTime CreatedDate { get; set; }
     }
 }

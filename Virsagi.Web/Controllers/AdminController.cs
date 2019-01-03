@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -22,11 +23,17 @@ namespace Virsagi.Web.Controllers
             return View();
         }
 
-        public ActionResult GetAllAgents()
+        public ActionResult GetAllAgents(DateTime? filterDate)
         {
+            if(filterDate == null)
+            {
+                filterDate = DateTime.Now;
+            }
+
             db = new VirsagiContext();
 
             var data = (from s in db.Agents
+                        where DbFunctions.TruncateTime(s.CreatedDate) == filterDate
                         select new AgentViewModel
                         {
                             AgentID = s.AgentID,
@@ -40,11 +47,17 @@ namespace Virsagi.Web.Controllers
             return View(data);
         }
 
-        public ActionResult GetAllRequests()
+        public ActionResult GetAllRequests(DateTime? filterDate)
         {
+            if (filterDate == null)
+            {
+                filterDate = DateTime.Now;
+            }
+
             db = new VirsagiContext();
 
             var data = (from s in db.WorkerRequests
+                        where DbFunctions.TruncateTime(s.CreatedDate) == filterDate
                         select new WorkerRequestViewModel
                         {
                             RequestTypeString = s.RequestType == 1 ? "Company" : "Agent",

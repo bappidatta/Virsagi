@@ -34,7 +34,7 @@ namespace Virsagi.Web.Controllers
                     Email = vm.Email,
                     Details = vm.Details,
                     SpecialRequest = vm.SpecialRequest,
-                    CreatedDate = DateTime.Now
+                    CreatedDate = vm.CreatedDate
                 };
 
                 db.WorkerRequests.Add(workerRequest);
