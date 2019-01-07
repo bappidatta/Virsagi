@@ -23,6 +23,7 @@
           </Key>
           <Property Name="HitCounterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TotalCount" Type="int" Nullable="false" />
+          <Property Name="MonthlyCount" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="News">
           <Key>
@@ -65,8 +66,8 @@
         <EntityContainer Name="VirsagiContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="WorkerRequests" EntityType="VirsagiModel.WorkerRequest" />
           <EntitySet Name="News" EntityType="VirsagiModel.News" />
-          <EntitySet Name="HitCounters" EntityType="VirsagiModel.HitCounter" />
           <EntitySet Name="Agents" EntityType="VirsagiModel.Agent" />
+          <EntitySet Name="HitCounters" EntityType="VirsagiModel.HitCounter" />
         </EntityContainer>
         <EntityType Name="WorkerRequest">
           <Key>
@@ -96,13 +97,6 @@
           <Property Name="NewsDetails3" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="LastUpdatedBy" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <EntityType Name="HitCounter">
-          <Key>
-            <PropertyRef Name="HitCounterID" />
-          </Key>
-          <Property Name="HitCounterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TotalCount" Type="Int32" Nullable="false" />
-        </EntityType>
         <EntityType Name="Agent">
           <Key>
             <PropertyRef Name="AgentID" />
@@ -114,6 +108,14 @@
           <Property Name="ContactNumber" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="HitCounter">
+          <Key>
+            <PropertyRef Name="HitCounterID" />
+          </Key>
+          <Property Name="HitCounterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TotalCount" Type="Int32" Nullable="false" />
+          <Property Name="MonthlyCount" Type="Int32" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -151,14 +153,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="HitCounters">
-            <EntityTypeMapping TypeName="VirsagiModel.HitCounter">
-              <MappingFragment StoreEntitySet="HitCounter">
-                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
-                <ScalarProperty Name="HitCounterID" ColumnName="HitCounterID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Agents">
             <EntityTypeMapping TypeName="VirsagiModel.Agent">
               <MappingFragment StoreEntitySet="Agent">
@@ -169,6 +163,15 @@
                 <ScalarProperty Name="RLNo" ColumnName="RLNo" />
                 <ScalarProperty Name="RLName" ColumnName="RLName" />
                 <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HitCounters">
+            <EntityTypeMapping TypeName="VirsagiModel.HitCounter">
+              <MappingFragment StoreEntitySet="HitCounter">
+                <ScalarProperty Name="MonthlyCount" ColumnName="MonthlyCount" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="HitCounterID" ColumnName="HitCounterID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -44,6 +44,13 @@ namespace Virsagi.Web
             {
                 var hitCounter = db.HitCounters.FirstOrDefault();
                 hitCounter.TotalCount++;
+                hitCounter.MonthlyCount++;
+
+                if(DateTime.Now.Day == 1)
+                {
+                    hitCounter.MonthlyCount = 1;
+                }
+
                 db.HitCounters.Add(hitCounter);
                 db.Entry(hitCounter).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();

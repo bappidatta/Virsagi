@@ -16,5 +16,6 @@ namespace Virsagi.Web.Models
     {
         public int HitCounterID { get; set; }
         public int TotalCount { get; set; }
+        public int MonthlyCount { get; set; }
     }
 }

@@ -19,6 +19,7 @@ namespace Virsagi.Web.Controllers
             db = new VirsagiContext();
             var data = db.HitCounters.FirstOrDefault();
             ViewBag.totalCount = data.TotalCount;
+            ViewBag.monthlyCount = data.MonthlyCount;
 
             return View();
         }
