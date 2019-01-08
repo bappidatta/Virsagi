@@ -31,7 +31,7 @@ namespace Virsagi.Web.ViewModels
         public string Details { get; set; }
         public string SpecialRequest { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:M}")]
+        [DisplayFormat(DataFormatString = "{0 : dd/MM/yyyy}")]
         public DateTime CreatedDate { get; set; }
     }
 }

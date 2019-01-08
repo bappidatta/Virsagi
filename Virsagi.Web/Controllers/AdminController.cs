@@ -26,14 +26,26 @@ namespace Virsagi.Web.Controllers
 
         public ActionResult GetAllAgents(DateTime? filterDate)
         {
-            if(filterDate == null)
-            {
-                filterDate = DateTime.Now;
-            }
-
             db = new VirsagiContext();
+            List<AgentViewModel> data;
 
-            var data = (from s in db.Agents
+            if (filterDate == null)
+            {
+                data = (from s in db.Agents
+                        select new AgentViewModel
+                        {
+                            AgentID = s.AgentID,
+                            RLName = s.RLName,
+                            RLNo = s.RLNo,
+                            RLAddress = s.RLAddress,
+                            ContactNumber = s.ContactNumber,
+                            Email = s.Email,
+                            CreatedDate = s.CreatedDate ?? DateTime.Now
+                        }).ToList();
+            }
+            else
+            {
+                data = (from s in db.Agents
                         where DbFunctions.TruncateTime(s.CreatedDate) == filterDate
                         select new AgentViewModel
                         {
@@ -42,22 +54,40 @@ namespace Virsagi.Web.Controllers
                             RLNo = s.RLNo,
                             RLAddress = s.RLAddress,
                             ContactNumber = s.ContactNumber,
-                            Email = s.Email
-                        }).AsEnumerable();
+                            Email = s.Email,
+                            CreatedDate = s.CreatedDate ?? DateTime.Now
+                        }).ToList();
+            }
+
+            
 
             return View(data);
         }
 
         public ActionResult GetAllRequests(DateTime? filterDate)
         {
+            db = new VirsagiContext();
+            List<WorkerRequestViewModel> data;
+
             if (filterDate == null)
             {
-                filterDate = DateTime.Now;
+                data = (from s in db.WorkerRequests
+                        select new WorkerRequestViewModel
+                        {
+                            RequestTypeString = s.RequestType == 1 ? "Company" : "Agent",
+                            ContactPerson = s.ContactPerson,
+                            ContactNumber = s.ContactNumber,
+                            CompanyUENNumber = s.CompanyUENNumber,
+                            CompanyName = s.CompanyName,
+                            Email = s.Email,
+                            Details = s.Details,
+                            SpecialRequest = s.SpecialRequest,
+                            CreatedDate = s.CreatedDate
+                        }).ToList();
             }
-
-            db = new VirsagiContext();
-
-            var data = (from s in db.WorkerRequests
+            else
+            {
+                data = (from s in db.WorkerRequests
                         where DbFunctions.TruncateTime(s.CreatedDate) == filterDate
                         select new WorkerRequestViewModel
                         {
@@ -70,7 +100,8 @@ namespace Virsagi.Web.Controllers
                             Details = s.Details,
                             SpecialRequest = s.SpecialRequest,
                             CreatedDate = s.CreatedDate
-                        }).AsEnumerable();
+                        }).ToList();
+            }
 
             return View(data);
         }
