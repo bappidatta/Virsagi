@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Virsagi.Web.ViewModels.IPAViewModel>
+@{
+    ViewBag.Title = "IPAs";
+}
+
+<h3 class="text-primary underline">@ViewBag.Title</h3>
+
+@using (Html.BeginForm("Index", "IPAs", FormMethod.Get))
+{
+    <div class="row">
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="fromDate" placeholder="From Date" onfocus="(this.type='date')" />
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="toDate" placeholder="To Date" onfocus="(this.type='date')" />
+        </div>
+        <div class="col-md-2">
+            <input type="submit" value="Search" class="btn btn-block btn-primary" />
+        </div>
+    </div>
+}
+
+@foreach (var item in Model)
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>@item.IssuanceDate.ToShortDateString()</h4>
+        </div>
+        <div class="panel-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-2 control-label" style="text-align:left">Passport No</label>
+                    <label class="col-md-2 control-label" style="text-align:left">@item.PassportNo</label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" style="text-align:left">Worker Name</label>
+                    <label class="col-md-2 control-label" style="text-align:left">@item.WorkerName</label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" style="text-align:left">Employer</label>
+                    <label class="col-md-2 control-label" style="text-align:left">@item.Employer</label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" style="text-align:left">Work Permit No</label>
+                    <label class="col-md-2 control-label" style="text-align:left">@item.WorkPermitNo</label>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" style="text-align:left">Reference No</label>
+                    <label class="col-md-2 control-label" style="text-align:left">@item.ReferenceNo</label>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<style type="text/css">
+    .control-label {
+        text-align:left;
+        font-size: 16px;
+        font-weight: 100;
+    }
+</style>
