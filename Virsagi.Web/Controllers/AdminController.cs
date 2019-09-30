@@ -127,5 +127,87 @@ namespace Virsagi.Web.Controllers
 
             return View(news);
         }
+
+        public ActionResult IPA(DateTime? fromDate, DateTime? toDate)
+        {
+            db = new VirsagiContext();
+
+            var query = (from s in db.IPAs
+                        select new IPAViewModel
+                        {
+                            IPAID = s.IPAID,
+                            PassportNo = s.PassportNo,
+                            WorkerName = s.WorkerName,
+                            Employer = s.Employer,
+                            WorkPermitNo = s.WorkPermitNo,
+                            ReferenceNo = s.ReferenceNo,
+                            IssuanceDate = s.IssuanceDate
+                        }).AsQueryable();
+
+            if(fromDate != null && toDate != null)
+            {
+                query = query.Where(x => x.IssuanceDate >= fromDate && x.IssuanceDate <= toDate);
+            }
+
+            var data = query.AsEnumerable();
+
+            return View(data);
+        }
+
+        public ActionResult IPASave(int? id)
+        {
+            if(id != null && id != 0)
+            {
+                db = new VirsagiContext();
+
+                var data = (from s in db.IPAs
+                            where s.IPAID == id
+                            select new IPAViewModel
+                            {
+                                IPAID = s.IPAID,
+                                PassportNo = s.PassportNo,
+                                WorkerName = s.WorkerName,
+                                Employer = s.Employer,
+                                WorkPermitNo = s.WorkPermitNo,
+                                ReferenceNo = s.ReferenceNo,
+                                IssuanceDate = s.IssuanceDate
+                            }).SingleOrDefault();
+
+                return View(data);
+            }
+
+            return View();  
+        }
+
+        [HttpPost]
+        public ActionResult IPASave(IPAViewModel ipaVM)
+        {
+            db = new VirsagiContext();
+
+            var ipa = new IPA
+            {
+                IPAID = ipaVM.IPAID,
+                PassportNo = ipaVM.PassportNo,
+                WorkerName = ipaVM.WorkerName,
+                Employer = ipaVM.Employer,
+                WorkPermitNo = ipaVM.WorkPermitNo,
+                ReferenceNo = ipaVM.ReferenceNo,
+                IssuanceDate = ipaVM.IssuanceDate
+            };
+
+            if(ipaVM.IPAID == 0)
+            {
+                db.IPAs.Add(ipa);
+                db.SaveChanges();
+            }
+            else
+            {
+                db.IPAs.Add(ipa);
+                db.Entry(ipa).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("IPA");
+        }
     }
 }

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Virsagi.Web.ViewModels.IPAViewModel>
+@{
+    ViewBag.Title = "IPA";
+}
+
+<h3 class="text-primary underline">@ViewBag.Title</h3>
+
+@using (Html.BeginForm("IPA", "Admin", FormMethod.Get))
+{
+    <div class="row">
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="fromDate" placeholder="From Date" onfocus="(this.type='date')" />
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="toDate" placeholder="To Date" onfocus="(this.type='date')" />
+        </div>
+        <div class="col-md-2">
+            <input type="submit" value="Search" class="btn btn-block btn-primary" />
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Create IPA", "IPASave", "Admin", null, new { @class = "btn btn-block btn-primary" })
+        </div>
+    </div>
+}
+
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>
+            Passport No
+        </th>
+        <th>
+            Worker Name
+        </th>
+        <th>
+            Employer
+        </th>
+        <th>
+            WorkPermit No
+        </th>
+        <th>
+            Reference No
+        </th>
+        <th>
+            Issuance Date
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassportNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkPermitNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferenceNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IssuanceDate)
+            </td>
+            <td>
+                <a href="/Admin/IPASave/@item.IPAID">Edit</a>
+            </td>
+        </tr>
+    }
+
+</table>
+

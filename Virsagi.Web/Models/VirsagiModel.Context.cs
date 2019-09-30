@@ -29,5 +29,6 @@ namespace Virsagi.Web.Models
         public virtual DbSet<News> News { get; set; }
         public virtual DbSet<Agent> Agents { get; set; }
         public virtual DbSet<HitCounter> HitCounters { get; set; }
+        public virtual DbSet<IPA> IPAs { get; set; }
     }
 }

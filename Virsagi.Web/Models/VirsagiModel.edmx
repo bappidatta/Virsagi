@@ -25,6 +25,18 @@
           <Property Name="TotalCount" Type="int" Nullable="false" />
           <Property Name="MonthlyCount" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="IPA">
+          <Key>
+            <PropertyRef Name="IPAID" />
+          </Key>
+          <Property Name="IPAID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PassportNo" Type="varchar" MaxLength="100" />
+          <Property Name="WorkerName" Type="varchar" MaxLength="200" />
+          <Property Name="Employer" Type="varchar" MaxLength="200" />
+          <Property Name="WorkPermitNo" Type="varchar" MaxLength="200" />
+          <Property Name="ReferenceNo" Type="varchar" MaxLength="200" />
+          <Property Name="IssuanceDate" Type="date" Nullable="false" />
+        </EntityType>
         <EntityType Name="News">
           <Key>
             <PropertyRef Name="NewsID" />
@@ -56,6 +68,7 @@
         <EntityContainer Name="VirsagiModelStoreContainer">
           <EntitySet Name="Agent" EntityType="Self.Agent" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HitCounter" EntityType="Self.HitCounter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IPA" EntityType="Self.IPA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WorkerRequest" EntityType="Self.WorkerRequest" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -68,6 +81,7 @@
           <EntitySet Name="News" EntityType="VirsagiModel.News" />
           <EntitySet Name="Agents" EntityType="VirsagiModel.Agent" />
           <EntitySet Name="HitCounters" EntityType="VirsagiModel.HitCounter" />
+          <EntitySet Name="IPAs" EntityType="VirsagiModel.IPA" />
         </EntityContainer>
         <EntityType Name="WorkerRequest">
           <Key>
@@ -116,6 +130,18 @@
           <Property Name="HitCounterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TotalCount" Type="Int32" Nullable="false" />
           <Property Name="MonthlyCount" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IPA">
+          <Key>
+            <PropertyRef Name="IPAID" />
+          </Key>
+          <Property Name="IPAID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PassportNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WorkerName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Employer" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="WorkPermitNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ReferenceNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IssuanceDate" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -172,6 +198,19 @@
                 <ScalarProperty Name="MonthlyCount" ColumnName="MonthlyCount" />
                 <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
                 <ScalarProperty Name="HitCounterID" ColumnName="HitCounterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IPAs">
+            <EntityTypeMapping TypeName="VirsagiModel.IPA">
+              <MappingFragment StoreEntitySet="IPA">
+                <ScalarProperty Name="IssuanceDate" ColumnName="IssuanceDate" />
+                <ScalarProperty Name="ReferenceNo" ColumnName="ReferenceNo" />
+                <ScalarProperty Name="WorkPermitNo" ColumnName="WorkPermitNo" />
+                <ScalarProperty Name="Employer" ColumnName="Employer" />
+                <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+                <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+                <ScalarProperty Name="IPAID" ColumnName="IPAID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

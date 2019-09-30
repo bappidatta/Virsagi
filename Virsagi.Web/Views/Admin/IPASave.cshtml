@@ -1,0 +1,79 @@
+﻿@model Virsagi.Web.ViewModels.IPAViewModel
+@{
+    ViewBag.Title = "IPASave";
+}
+
+<h3 class="text-primary"></h3>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Create or Update IPA</h4>
+    </div>
+    <div class="panel-body">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.HiddenFor(model => model.IPAID)
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Passport No</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.PassportNo, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PassportNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Worker Name</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.WorkerName, new { @class = "form-control", @required = true })
+                        @Html.ValidationMessageFor(model => model.WorkerName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Employer</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Employer, new { @class = "form-control", @required = true })
+                        @Html.ValidationMessageFor(model => model.Employer, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">WorkPermit No</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.WorkPermitNo, new { @class = "form-control", @required = true })
+                        @Html.ValidationMessageFor(model => model.WorkPermitNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Reference No</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.ReferenceNo, new { @class = "form-control", @required = true })
+                        @Html.ValidationMessageFor(model => model.ReferenceNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Issuance Date</label>
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.IssuanceDate, new { @class = "form-control", @required = true, @type = "date" })
+                        @Html.ValidationMessageFor(model => model.IssuanceDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-9 col-md-3">
+                        <input type="submit" value="Save" class="btn btn-block btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
