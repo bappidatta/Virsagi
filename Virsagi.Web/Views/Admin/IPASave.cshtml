@@ -62,7 +62,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label">Issuance Date</label>
                     <div class="col-md-10">
-                        @Html.TextBoxFor(model => model.IssuanceDate, new { @class = "form-control", @required = true, @type = "date" })
+                        @Html.TextBoxFor(model => model.IssuanceDate, new { @class = "form-control", @required = true, onfocus = "(this.type='date')" })
                         @Html.ValidationMessageFor(model => model.IssuanceDate, "", new { @class = "text-danger" })
                     </div>
                 </div>
