@@ -8,11 +8,15 @@
 @using (Html.BeginForm("Index", "IPAs", FormMethod.Get))
 {
     <div class="row">
-        <div class="col-md-2">
+        @*<div class="col-md-2">
             <input type="text" class="form-control" name="fromDate" placeholder="From Date" onfocus="(this.type='date')" />
         </div>
         <div class="col-md-2">
             <input type="text" class="form-control" name="toDate" placeholder="To Date" onfocus="(this.type='date')" />
+        </div>*@
+
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="workPermitNo" placeholder="Work Permit No" />
         </div>
         <div class="col-md-2">
             <input type="submit" value="Search" class="btn btn-block btn-primary" />

@@ -12,8 +12,11 @@ namespace Virsagi.Web.Controllers
     {
         private VirsagiContext db;
 
-        public ActionResult Index(DateTime? fromDate, DateTime? toDate)
+        public ActionResult Index(string workPermitNo)
         {
+            var fromDate = DateTime.Now.AddDays(-14);
+            var toDate = DateTime.Now;
+
             db = new VirsagiContext();
 
             var query = (from s in db.IPAs
@@ -28,9 +31,11 @@ namespace Virsagi.Web.Controllers
                              IssuanceDate = s.IssuanceDate
                          }).AsQueryable();
 
-            if (fromDate != null && toDate != null)
+            query = query.Where(x => x.IssuanceDate >= fromDate && x.IssuanceDate <= toDate);
+
+            if(!String.IsNullOrEmpty(workPermitNo))
             {
-                query = query.Where(x => x.IssuanceDate >= fromDate && x.IssuanceDate <= toDate);
+                query = query.Where(x => x.WorkPermitNo == workPermitNo);
             }
 
             var data = query.AsEnumerable();
